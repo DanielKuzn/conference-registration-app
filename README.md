@@ -1,4 +1,4 @@
-# Conference Registration System
+# Conference Registration System v0.1
 
 A Python-based project to manage participant registration for a conference. The system allows users to register, view participants, manage ticket types, and administer the entire registration process.
 
