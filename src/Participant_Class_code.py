@@ -2,7 +2,7 @@
 Klasa `Participant` – prosty model domenowy reprezentujący uczestnika
 konferencji.
 
-### Atrybuty
+### Atrybutyy
 * **name** – pełne imię i nazwisko (`str`).
 * **email** – adres e‑mail (`str`). Walidowany prostym – ale sensownym – regexem.
 * **ticket_type** – rodzaj biletu (`str`, np. "standard", "vip").
