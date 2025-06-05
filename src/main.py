@@ -1,7 +1,7 @@
 from admin import Admin
-from conference import Conference
-from registration_system import RegistrationSystem
-from participant import Participant
+from Conference import Conference
+from RegistrationSystem_class import RegistrationSystem
+from Participant_Class_code import Participant
 
 def main():
     print("Welcome to the Conference Registration System\n")

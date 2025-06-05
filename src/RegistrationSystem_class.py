@@ -1,3 +1,7 @@
+import csv
+from Participant_Class_code import Participant
+
+
 class RegistrationSystem:
     """
     Handles the logic for registering participants and managing data.

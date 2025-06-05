@@ -1,5 +1,5 @@
 from hashlib import sha256
-from conference import Conference
+from Conference import Conference
 
 class Admin:
     """
