@@ -23,3 +23,14 @@ class TestConferenceSystemIntegration(unittest.TestCase):
         self.assertEqual(len(system.participants), 1)
         self.assertEqual(len(conference.participants), 1)
         self.assertEqual(conference.participants[0].email, "anna@example.com")
+
+    def test_admin_view_statistics(self):
+        from admin import Admin
+        admin = Admin("admin", "pass123")
+        conference = Conference("AI Expo", "Poznan", "2025-12-01")
+        conference.add_participant(Participant("Bob", "bob@example.com", "Standard"))
+        conference.add_participant(Participant("Carol", "carol@example.com", "VIP"))
+        try:
+            admin.view_statistics(conference)
+        except Exception as e:
+            self.fail(f"admin.view_statistics raised an exception: {e}")
