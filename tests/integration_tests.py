@@ -34,3 +34,25 @@ class TestConferenceSystemIntegration(unittest.TestCase):
             admin.view_statistics(conference)
         except Exception as e:
             self.fail(f"admin.view_statistics raised an exception: {e}")
+
+    def test_export_and_import_participants(self):
+        # Arrange
+        system = RegistrationSystem()
+        conference = Conference("ML Conf", "Lodz", "2025-09-15")
+        participant = system.register_participant("Eva", "eva@example.com", "Standard")
+        conference.add_participant(participant)
+     # Create a temporary CSV file
+        with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix='.csv') as temp_file:
+            filename = temp_file.name
+     # Act
+        system.export_to_csv(filename)
+        new_system = RegistrationSystem()
+        new_system.import_from_csv(filename)
+     # Clean up
+        os.remove(filename)
+     # Assert
+        self.assertEqual(len(new_system.participants), 1)
+        self.assertEqual(new_system.participants[0].email, "eva@example.com")
+
+if __name__ == '__main__':
+    unittest.main()
