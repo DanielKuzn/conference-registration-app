@@ -1,0 +1,17 @@
+site_name: Conference Registration System
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+
+nav:
+  - Home: index.md
+  - Modules:
+      - Admin: admin.md
+      - Participant: participant.md
+      - Conference: conference.md
+      - Ticket: ticket.md
+      - Registration System: registration_system.md
