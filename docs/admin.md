@@ -1,0 +1,3 @@
+# Admin Module
+
+::: src.admin

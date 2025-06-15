@@ -4,6 +4,9 @@ from RegistrationSystem_class import RegistrationSystem
 from Participant_Class_code import Participant
 
 def main():
+    """
+    Main entry point of the Conference Registration System CLI.
+    """
     print("Welcome to the Conference Registration System\n")
 
     # Setup default admin and conference (could be extended to load from config or DB)
