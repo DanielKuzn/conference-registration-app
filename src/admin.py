@@ -3,10 +3,21 @@ from Conference import Conference
 
 class Admin:
     """
-    Represents an admin user who can manage the conference system.
+    Represents an administrator with privileges to manage a conference.
+
+    Attributes:
+        username (str): The admin's username.
+        password (str): The admin's password.
     """
 
     def __init__(self, username: str, password: str):
+        """
+        Initialize an Admin instance.
+
+        Args:
+            username (str): Admin username.
+            password (str): Admin password.
+        """
         self.username = username
         self.password_hash = self._hash_password(password)
 
@@ -18,13 +29,22 @@ class Admin:
 
     def authenticate(self, password: str) -> bool:
         """
-        Checks if the provided password matches the stored hash.
+        Authenticate the admin using the password.
+
+        Args:
+            password (str): Password to check.
+
+        Returns:
+            bool: True if authentication is successful, False otherwise.
         """
         return self._hash_password(password) == self.password_hash
 
     def view_statistics(self, conference: Conference):
         """
-        Prints statistics about participants in a conference.
+        Display the number of registered participants.
+
+        Args:
+            conference (Conference): The conference to inspect.
         """
         print(f"Conference: {conference.name}")
         print(f"Location: {conference.location}")
@@ -39,7 +59,10 @@ class Admin:
 
     def manage_conference(self, conference: Conference):
         """
-        Provides an interactive interface to manage a given conference.
+        Perform basic administrative actions on the conference.
+
+        Args:
+            conference (Conference): The conference to manage.
         """
         while True:
             print("\nConference Management Menu:")
