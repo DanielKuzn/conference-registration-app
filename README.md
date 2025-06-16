@@ -1,4 +1,4 @@
-# Conference Registration System v0.1
+# Conference Registration System v1.0
 
 A Python-based project to manage participant registration for a conference. The system allows users to register, view participants, manage ticket types, and administer the entire registration process.
 
@@ -26,7 +26,7 @@ A Python-based project to manage participant registration for a conference. The 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/conference-registration.git
+git clone https://github.com/DanielKuzn/conference-registration.git
 cd conference-registration
 ```
 
@@ -72,4 +72,4 @@ pytest tests/
 
 ---
 
-Developed by a student team as part of a software engineering project.
+Developed by a student team (Dawid Andrzejczak, Daniel Kuźnicki, Mateusz Matuszak, Adrian Rybiński, Kacper Woźny) as part of a software engineering project. The project concept was planned together. Each group member was tasked with preparing one of the classes and unit tests for a class created by another group member.
