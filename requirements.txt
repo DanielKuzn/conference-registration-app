@@ -1,0 +1,15 @@
+# Core dependencies (standard library, but here for clarity)
+# No third-party packages required for core app logic
+
+# Testing
+pytest>=7.0.0
+pytest-mock>=3.0.0
+
+# Documentation
+mkdocs>=1.5
+mkdocs-material>=9.5
+mkdocstrings[python]>=0.24
+
+# Optional: type checking and linting
+mypy>=1.0
+flake8>=6.0
